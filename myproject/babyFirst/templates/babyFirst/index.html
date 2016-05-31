@@ -1,1 +1,110 @@
 {% extends 'babyFirst/base.html' %}
+
+{% block mainbody %}
+{% load staticfiles %}
+<div class="row">
+
+  <div class="col-lg-9">
+
+    <div class="panel panel-default">
+
+      <div class="panel-heading">
+        <i class="fa fa-smile-o" aria-hidden="true"></i>
+        <h2>Welcome to BabyFirst</h2>
+
+      </div>
+
+      <div class="panel-body">
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="months">
+              <div id="main-chart" style="height:390px">
+                <img src="{% static 'img/gallery/babybackground.jpg' %}" class="img-responsive">
+
+
+              </div>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="panel-footer">
+        <ul class="panel-footer-stats">
+          <li>
+            <canvas id="gauge-success" height=50 width=70></canvas>
+            <span class="number">148.125</span>
+            <span class="title">New users</span>
+          </li>
+          <li>
+            <canvas id="gauge-info" height=50 width=70></canvas>
+            <span class="number">452.352</span>
+            <span class="title">Pageviews</span>
+          </li>
+          <li>
+            <canvas id="gauge-warning" height=50 width=70></canvas>
+            <span class="number">2,19</span>
+            <span class="title">Pages / Visit</span>
+          </li>
+          <li>
+            <canvas id="gauge-danger" height=50 width=70></canvas>
+            <span class="number">59,83%</span>
+            <span class="title">Bounce Rate</span>
+          </li>
+          <li>
+            <canvas id="gauge-primary" height=50 width=70></canvas>
+            <span class="number">70,79%</span>
+            <span class="title">New Visits</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div><!--/col-->
+
+  <div class="col-lg-3 col-sm-6">
+
+    <div class="panel panel-default">
+
+      <div class="panel-body text-center" style="height:233px">
+        <img src="{% static 'img/food-1.png' %}" class="img-responsive">
+
+        <div style="width:300px;left:50%;position:absolute;margin-left:-150px;">
+
+
+        </div>
+      </div>
+      <div class="panel-footer">
+        <strong>Food</strong>
+        <span class="pull-right"><i class="fa fa-arrow-circle-o-up text-success"></i> 15%</span>
+      </div>
+
+    </div>
+
+  </div><!--/col-->
+
+  <div class="col-lg-3 col-sm-6">
+
+    <div class="panel panel-default">
+
+      <div class="panel-body text-center" style="height:232px">
+        <img src="{% static 'img/bottle.png' %}" class="img-responsive">
+        <div style="width:300px;left:50%;position:absolute;margin-left:-150px;">
+
+
+
+
+        </div>
+      </div>
+      <div class="panel-footer">
+        <strong>Drink</strong>
+        <span class="pull-right"><i class="fa fa-arrow-circle-o-down text-danger"></i> 53%</span>
+      </div>
+
+    </div>
+
+  </div><!--/.col-->
+
+</div><!--/row-->
+
+{% endblock mainbody %}
